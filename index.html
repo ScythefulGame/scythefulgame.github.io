@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Homepage for the Scytheful site.">
-    <title>Homepage - Scytheful</title>
+    <title>Scytheful - Home</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/game_graphics/main_logo.png">
@@ -30,6 +30,7 @@
         {
           --bg-navy: #0a1c33;
           --header-blue: #002f87;
+          --content-blue: #174186;
           --banner-blue: #1a3f78;
           --hero-navy: #0d2544;
           --accent-cyan: #38b3ff;
@@ -118,61 +119,91 @@
         {
           filter: brightness(75%);
         }
+
+        .main_content
+        {
+          background: var(--content-blue);
+
+          width: 100%;
+
+          display:flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+
+        .page-wrap
+        {
+          width: 90%;
+          margin: 0 auto;
+          background: var(--content-blue);
+        }
     </style>
   </head>
 
 
 
-
-
-
-
   <body>
-    <header>
-        <a class="brand" href="/">
-            <img src="assets/game_graphics/main_logo.png" alt="Scytheful logo">
-            <span>
-                Scytheful - Official Site
-            </span>
-        </a>
-
-        <nav>
-            <a href="/">Home</a>
-            <a href="about-the-game">About the Game</a>
-            <!-- <a href="download-links">Download Links</a>
-            <a href="known-issues">Known Issues</a>
-            <a href="future-plans">Future Plans</a> -->
-            <a href="contributors">Contributors</a>
-        </nav>
-    </header>
-
     <main>
-      <!-- Top Heading Content -->
-      <div class = "main_heading" size="225px">
-        <!-- <img src="assets/game_graphics/main_logo.png" alt="Scytheful logo" height="100px"> -->
+      <!-- Page Wrapper -->
+      <div class="page-wrap">
+        <!-- Navigation Bar -->
+        <header>
+          <a class="brand" href="/">
+              <img src="assets/game_graphics/main_logo.png" alt="Scytheful logo">
+              <span>
+                  Scytheful - Official Site
+              </span>
+          </a>
 
-        <h1 style="color: var(--homepage-heading); font-size: 52px">
-          Scytheful - Official Site
-        </h1>
+          <nav>
+              <a href="/">Home</a>
+              <a href="about-the-game">About the Game</a>
+              <!-- <a href="download-links">Download Links</a>
+              <a href="known-issues">Known Issues</a>
+              <a href="future-plans">Future Plans</a> -->
+              <a href="contributors">Contributors</a>
+          </nav>
+        </header>
+        <!-- End Navigation Bar -->
+        
 
-        <h2 style="color: var(--accent-cyan)">
-          Welcome to the Official Site for Scytheful. 
-          Have a look around!
-        </h2>
+
+        <!-- Top Heading Content -->
+        <div class = "main_heading" size="225px">
+          <!-- <img src="assets/game_graphics/main_logo.png" alt="Scytheful logo" height="100px"> -->
+
+          <h1 style="color: var(--homepage-heading); font-size: 52px">
+            Scytheful - Official Site
+          </h1>
+
+          <h2 style="color: var(--accent-cyan)">
+            Welcome to the Official Site for Scytheful. 
+            Have a look around!
+          </h2>
+        </div>
+        <!-- End Top Heading Content -->
+
+
+
+        <!-- Main Content -->
+        <div class="main_content">
+          <p style="color: var(--accent-cyan); font-size: 32px; text-align: center; font-weight: bold">
+            Hello, this site is still a work in progress!
+          </p>
+
+          <p style="color: var(--accent-cyan); font-size: 32px; text-align: center; font-weight: bold">
+            Please be patient lol...
+          </p>
+
+          <p style="color: var(--accent-cyan); font-size: 32px; text-align: center; font-weight: bold">
+            Other pages may also be unfinished lmao
+          </p>
+        </div>
+        <!-- End Main Content -->
       </div>
-      <!-- End Top Heading Content -->
-
-      <p style="color: var(--accent-cyan); font-size: 32px; text-align: center; font-weight: bold">
-        Hello, this site is still a work in progress!
-      </p>
-
-      <p style="color: var(--accent-cyan); font-size: 32px; text-align: center; font-weight: bold">
-        Please be patient lol...
-      </p>
-
-      <p style="color: var(--accent-cyan); font-size: 32px; text-align: center; font-weight: bold">
-        Other pages may also be unfinished lmao
-      </p>
+      <!-- End Page Wrapper -->
     </main>
   </body>
 </html>
