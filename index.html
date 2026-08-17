@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Begin Heading Stuff LOL -->
-    <head>
-        <meta charset="UTF-8">
-        <title>
-            Homepage - Scytheful
-        </title>
-    </head>
+  <head>
+    <!-- Metadata Stuff... idk what to call this lmao -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Homepage for the Scytheful site.">
+    <title>Homepage - Scytheful</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <style>
         @font-face 
@@ -26,48 +28,151 @@
 
         :root 
         {
-            --bg-navy: #0a1c33;
-            --header-blue: #1560d6;
-            --banner-blue: #1a3f78;
-            --hero-navy: #0d2544;
-            --accent-cyan: #38b3ff;
+          --bg-navy: #0a1c33;
+          --header-blue: #002f87;
+          --banner-blue: #1a3f78;
+          --hero-navy: #0d2544;
+          --accent-cyan: #38b3ff;
+          --homepage-heading: #71c9ff;
         }
 
         body 
         {
-            margin: 0;
-            font-family: 'Lexend', sans-serif;
-            background: var(--bg-navy);
-            color: var(--text-white);
+          margin: 0;
+          font-family: 'Lexend', sans-serif;
+          background: var(--bg-navy);
+          color: var(--text-white);
         }
-        
-    </style>
 
+        .main_heading
+        {
+          background-image: url("assets/generic_items/lined_background_alt.png");
+          background-size: cover;
+          background-position: center;
+          
+          width: 100%;
+          height: 225px;
+
+          display:flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+
+        .main_heading h1
+        {
+          margin: 0; 
+        }
+
+        .main_heading h2
+        {
+          margin-top: 12px;
+          margin-bottom: 0;
+        }
+
+        header 
+        {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          background: var(--header-blue);
+          padding: 14px 32px;
+        }
+
+        .brand 
+        {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          text-decoration: none;
+        }
+    
+        .brand img 
+        {
+          height: 48px;
+        }
+    
+        .brand span 
+        {
+          font-weight: bold;
+          font-size: 20px;
+          color: #fff;
+        }
+
+        nav /* General Nav content */
+        {
+          font-family: 'Lexend', sans-serif;
+          display: flex;
+          gap: 28px;
+        }
+    
+        nav a /* Main Nav Links */
+        {
+            color: #eaf2ff;
+            font-weight: 600;
+            text-decoration: none;
+        }
+    
+        nav a:hover
+        {
+          filter: brightness(75%);
+        }
+    </style>
+  </head>
+
+
+
+
+
+
+
+  <body>
     <header>
-        <div>
-            <img src="assets/game_graphics/main_logo.png" alt="Scytheful logo" href="/">
-            <span>Scytheful - Official Site</span>
-        </div>
+        <a class="brand" href="/">
+            <img src="assets/game_graphics/main_logo.png" alt="Scytheful logo">
+            <span>
+                Scytheful - Official Site
+            </span>
+        </a>
+
         <nav>
             <a href="/">Home</a>
             <a href="about-the-game">About the Game</a>
-            <a href="download-links">Download Links</a>
+            <!-- <a href="download-links">Download Links</a>
             <a href="known-issues">Known Issues</a>
-            <a href="future-plans">Future Plans</a>
-            <a href="contributors" class="active">Contributors</a>
+            <a href="future-plans">Future Plans</a> -->
+            <a href="contributors">Contributors</a>
         </nav>
     </header>
-    <!-- End Heading Stuff LOL -->
 
-  <body>
-    <h1>
-      Scytheful - Homepage
-    </h1>
+    <main>
+      <!-- Top Heading Content -->
+      <div class = "main_heading" size="225px">
+        <!-- <img src="assets/game_graphics/main_logo.png" alt="Scytheful logo" height="100px"> -->
 
-    <b>
-      Under construction
-    </b>
+        <h1 style="color: var(--homepage-heading); font-size: 52px">
+          Scytheful - Official Site
+        </h1>
 
-    Contributors: <a href="contributors">here</a>
+        <h2 style="color: var(--accent-cyan)">
+          Welcome to the Official Site for Scytheful. 
+          Have a look around!
+        </h2>
+      </div>
+      <!-- End Top Heading Content -->
+
+      <p style="color: var(--accent-cyan); font-size: 32px; text-align: center; font-weight: bold">
+        Hello, this site is still a work in progress!
+      </p>
+
+      <p style="color: var(--accent-cyan); font-size: 32px; text-align: center; font-weight: bold">
+        Please be patient lol...
+      </p>
+
+      <p style="color: var(--accent-cyan); font-size: 32px; text-align: center; font-weight: bold">
+        Other pages may also be unfinished lmao
+      </p>
+    </main>
   </body>
 </html>
