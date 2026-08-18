@@ -1,6 +1,8 @@
 <!-- Footer -->
 <footer>
-    <hr class="footer-divider">
+    {% unless page.social_footer %}
+        <hr class="footer-divider footer-divider-before-quote">
+    {% endunless %}
 
     <blockquote class="footer-quote">
         <p>
@@ -12,5 +14,23 @@
             <!-- rip this little thing lol >>> . . ■ . . -->
         </cite>
     </blockquote>
+
+    {% if page.social_footer %}
+        <hr class="footer-divider footer-divider-after-quote">
+
+        <section class="social-footer" aria-labelledby="social-links-title">
+            <h2 id="social-links-title">■ Just Call Me 'L' Social Links ■</h2>
+
+            <div class="social-links">
+                <a href="https://discord.com" target="_blank" rel="noopener noreferrer" aria-label="Discord">D</a>
+                <a href="https://linktr.ee/justcallmel" target="_blank" rel="noopener noreferrer" aria-label="Linktree">↗</a>
+                <a href="https://just-call-me-l.itch.io/" target="_blank" rel="noopener noreferrer" aria-label="itch.io">itch</a>
+                <a href="https://soundcloud.com/just-call-me-l-7" target="_blank" rel="noopener noreferrer" aria-label="SoundCloud">☁</a>
+                <a href="https://www.youtube.com/@JustCallMeL7" target="_blank" rel="noopener noreferrer" aria-label="YouTube">▶</a>
+            </div>
+
+            <p class="discord-status">Discord Currently Unavaliable...</p>
+        </section>
+    {% endif %}
 </footer>
 <!-- End Footer -->
