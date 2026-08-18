@@ -155,6 +155,53 @@
           margin: 0 auto;
           background: var(--content-blue);
         }
+
+        /* Footer */
+        footer
+        {
+          background: var(--header-blue);
+          padding: 32px;
+          text-align: center;
+        }
+
+        .footer-quote
+        {
+          margin: 0;
+        }
+
+        .footer-quote p
+        {
+          color: var(--content-text);
+          font-family: 'Lexend', sans-serif;
+          font-weight: bold;
+          font-style: italic;
+          font-size: 22px;
+          margin: 0;
+        }
+
+        .footer-quote cite
+        {
+          display: block;
+          color: var(--accent-cyan);
+          font-family: 'Lexend', sans-serif;
+          font-weight: 600;
+          font-style: normal;
+          font-size: 15px;
+          margin-top: 12px;
+        }
+
+        .footer-quote .deco
+        {
+          font-size: 11px;
+          vertical-align: middle;
+        }
+
+        .footer-divider
+        {
+          border: none;
+          border-top: 1px solid rgba(234, 242, 255, 0.3);
+          margin: 24px 0 0;
+        }
     </style>
   </head>
 
@@ -165,6 +212,8 @@
         {% include header.html %} 
         
         {{ content }}
+
+        {% include footer.html %}
       </div>
       <!-- End Page Wrapper -->
     </main>
