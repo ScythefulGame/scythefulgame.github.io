@@ -26,8 +26,16 @@
         @font-face 
         {
             font-family: 'Lexend';
-            src: url('assets/fonts/Lexend/Lexend-Reguar.ttf') format('truetype');
+            src: url('assets/fonts/Lexend/Lexend-Regular.ttf') format('truetype');
             font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face
+        {
+            font-family: 'Lexend';
+            src: url('assets/fonts/Lexend/Lexend-Medium.ttf') format('truetype');
+            font-weight: 500 600;
             font-style: normal;
         }
 
@@ -193,12 +201,59 @@
         {
           border: none;
           border-top: 1px solid rgba(234, 242, 255, 0.3);
+          margin: 28px 0 0;
+        }
+
+        .footer-divider-before-quote
+        {
           margin: 0 0 28px;
+        }
+
+        .social-footer h2
+        {
+          margin: 28px 0 18px;
+          color: var(--homepage-heading);
+          font-size: 24px;
+        }
+
+        .social-links
+        {
+          display: flex;
+          justify-content: center;
+          gap: 18px;
+        }
+
+        .social-links a
+        {
+          display: inline-flex;
+          width: 48px;
+          height: 48px;
+          align-items: center;
+          justify-content: center;
+          border-radius: 10px;
+          background: var(--content-text);
+          color: var(--content-blue);
+          font-family: 'Lexend', sans-serif;
+          font-size: 16px;
+          font-weight: bold;
+          text-decoration: none;
+        }
+
+        .social-links a:hover
+        {
+          filter: brightness(80%);
+        }
+
+        .discord-status
+        {
+          margin: 18px 0 0;
+          color: var(--content-text);
+          font-size: 18px;
         }
     </style>
   </head>
 
-  <body>
+  <body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
     <main>
       <!-- Page Wrapper -->
       <div class="page-wrap">
@@ -211,3 +266,4 @@
       <!-- End Page Wrapper -->
     </main>
   </body>
+</html>

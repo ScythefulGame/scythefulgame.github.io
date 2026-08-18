@@ -1,156 +1,230 @@
 ---
 layout: default
 title: Contributors
+body_class: contributors-page-shell
+social_footer: true
 ---
-<!-- Top Heading Content -->
-<div class = "main_heading" style="
-    background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('assets/generic_items/lined_background_alt.png');
-    background-size: cover;
-    background-position: center;
-    height: 300px;">
-  <!-- <img src="assets/game_graphics/main_logo.png" alt="Scytheful logo" height="100px"> -->
-
-  <h1 style="color: white; font-size: 64px">
-    Contributors
-  </h1>
-
-  <h2 style="color: white">
-    View who's contributed to Scytheful throughout its development, DEMOS and forward!
-  </h2>
-</div>
-<!-- End Top Heading Content -->
 
 <style>
-    .contributors-grid 
-    {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
+  .contributors-page-shell .page-wrap {
+    position: relative;
+    width: 92%;
+    max-width: 1280px;
+  }
+
+  .contributors-page-shell header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    min-height: 56px;
+    padding: 4px 28px;
+  }
+
+  .contributors-page-shell .brand img {
+    height: 40px;
+  }
+
+  .contributors-hero {
+    height: 384px;
+    padding: 56px 48px 0;
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+      url('assets/generic_items/lined_background_alt.png');
+  }
+
+  .contributors-hero h1 {
+    color: #f9f9f9;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 1.38;
+  }
+
+  .contributors-hero h2 {
+    width: 100%;
+    max-width: 960px;
+    margin-top: 28px;
+    color: #f9f9f9;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  .contributors-content {
+    padding: 0;
+  }
+
+  .contributors-intro {
+    width: 100%;
+    padding: 32px 69px;
+  }
+
+  .contributors-intro h1 {
+    margin: 0;
+    color: var(--accent-cyan);
+    font-size: 45.333px;
+    font-weight: 700;
+    line-height: 1.38;
+  }
+
+  .contributors-grid {
+    width: 100%;
+    background-image: url('assets/generic_items/darkish_checkers.png');
+    background-position: top center;
+    background-repeat: repeat;
+    background-size: auto;
+  }
+
+  .contributor-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 100%;
+    padding: 24px 48px;
+    background-color: transparent;
+  }
+
+  .contributor-row:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.37);
+  }
+
+  .contributor-card {
+    min-width: 0;
+    padding: 0 3.75%;
+    padding-bottom: 26px;
+    color: #f9f9f9;
+    text-align: center;
+  }
+
+  .contributor-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .contributor-name {
+    display: block;
+    margin-top: 16px;
+    color: #f9f9f9;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  a.contributor-name {
+    text-decoration: underline;
+  }
+
+  a.contributor-name:hover {
+    filter: brightness(80%);
+  }
+
+  .contributor-quote {
+    margin: 16px 0 0;
+    color: #f9f9f9;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  .contributor-role {
+    margin: 10.667px 0 0;
+    color: #f9f9f9;
+    font-size: 10.667px;
+    font-weight: 500;
+    line-height: 16px;
+    white-space: pre-line;
+  }
+
+  @media (max-width: 700px) {
+    .contributors-page-shell .page-wrap {
+      width: 100%;
     }
 
-    .contributor-row 
-    {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        background-size: auto;
-        background-repeat: repeat;
-        padding: 30px 20px;
-        gap: 30px;
-
-        /* stretch to the viewport edges regardless of parent width/padding */
-        width: 100vw;
-        margin-left: calc(-50vw + 50%);
-        margin-right: calc(-50vw + 50%);
+    .contributors-page-shell header {
+      padding-inline: 16px;
     }
 
-    .contributor-card 
-    {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        width: 380px;
+    .contributors-page-shell header nav {
+      display: none;
     }
 
-    .contributor-card img 
-    {
-        width: 350px;
-        height: 350px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: 10px;
+    .contributors-hero {
+      height: 469px;
+      padding-inline: 27px;
     }
 
-    .contributor-name
-    {
-        color: var(--content-text);
-        font-weight: bold;
-        font-size: 25px;
+    .contributors-hero h1 {
+      font-size: 44px;
+      line-height: 1.38;
     }
 
-    a.contributor-name 
-    {
-        text-decoration: underline;
+    .contributors-hero h2 {
+      max-width: 327px;
+      font-size: 22.667px;
     }
 
-    a.contributor-name:hover 
-    {
-        filter: brightness(80%);
+    .contributors-intro {
+      padding: 32px 27px;
     }
 
-    .contributor-quote 
-    {
-        color: var(--content-text);
-        font-weight: bold;
-        font-size: 18px;
-        margin: 2px 0;
+    .contributors-intro h1 {
+      font-size: 33.333px;
+      line-height: 1.38;
     }
 
-    .contributor-role 
-    {
-        color: var(--content-text);
-        font-weight: bold;
-        font-size: 18px;
-        letter-spacing: 0.5px;
+    .contributor-row {
+      grid-template-columns: 1fr;
+      padding: 0 5px;
     }
+
+    .contributor-card {
+      padding: 24px 3.75% 0;
+      padding-bottom: 26px;
+    }
+
+  }
 </style>
 
+<section class="main_heading contributors-hero">
+  <h1>Contributors</h1>
+  <h2>View who's contributed to Scytheful throughout its development, DEMOS and forward!</h2>
+</section>
 
-<!-- Main Content -->
-<div class="main_content">
-  <h1 style="color: var(--accent-cyan); text-align: center; font-weight: bold; font-size: 48px">
-    Scytheful Contributors
-  </h1>
+<div class="main_content contributors-content">
+  <section class="contributors-intro">
+    <h1>Scytheful Contributors</h1>
+  </section>
 
-  <!-- <p style="color: var(--content-text); text-align: center; font-weight: normal; font-size: 26px">
-    STILL IN PROGRESS LOL!!!
-  </p> -->
-    <div class="contributors-grid">
-        {% assign per_row = 3 %} <!-- amount of people per row -->
-        <!-- get all contributors and loop through them lmao -->
-        {% for person in site.data.contributors %}
-            {% assign col = forloop.index0 | modulo: per_row %}
+  <div class="contributors-grid">
+    {% assign per_row = 3 %}
+    {% for person in site.data.contributors %}
+      {% assign column = forloop.index0 | modulo: per_row %}
 
-            {% if col == 0 %}
-            {% unless forloop.first %}</div>{% endunless %}
+      {% if column == 0 %}
+        {% unless forloop.first %}</div>{% endunless %}
 
-            <!-- alternate row background on every row -->
-            {% assign row_bg = "assets/generic_items/darkish_checkers.png" %}
-            {% assign row_num = forloop.index0 | divided_by: per_row %}
-            {% assign row_check = row_num | modulo: 2 %}
-            {% if row_check == 1 %}
-                {% assign row_bg = "assets/generic_items/dark_checkers.png" %}
-            {% endif %}
+        <div class="contributor-row">
+      {% endif %}
 
-            <div class="contributor-row" style="background-image: url('{{ row_bg }}');">
-            {% endif %}
+      <article class="contributor-card">
+        <img src="assets/credits/{{ person.image }}" alt="Portrait of {{ person.name }}">
 
-            <!-- person credit stuff lol -->
-            <div class="contributor-card">
-                <img src="assets/credits/{{ person.image }}" alt="{{ person.name }}">
+        {% if person.link %}
+          <a class="contributor-name" href="{{ person.link }}" target="_blank" rel="noopener noreferrer">
+            {{ person.name }}
+          </a>
+        {% else %}
+          <span class="contributor-name">{{ person.name }}</span>
+        {% endif %}
 
-                {% if person.link %}
-                    <a class="contributor-name" href="{{ person.link }}" target="_blank" rel="noopener">
-                        {{ person.name }}
-                    </a>
-                {% else %}
-                    <span class="contributor-name">
-                        {{ person.name }}
-                    </span>
-                {% endif %}
+        <p class="contributor-quote">
+          {% if person.quote == "[No Quote Provided]" %}{{ person.quote }}{% else %}&quot;{{ person.quote }}&quot;{% endif %}
+        </p>
+        <p class="contributor-role">{{ person.role }}</p>
+      </article>
 
-                <p class="contributor-quote">
-                    "{{ person.quote }}"
-                </p>
-                <p class="contributor-role">
-                    {{ person.role }}
-                </p>
-            </div>
-
-            {% if forloop.last %}</div>{% endif %}
-        {% endfor %}
-    </div>
+      {% if forloop.last %}</div>{% endif %}
+    {% endfor %}
+  </div>
 </div>
-<!-- End Main Content -->
