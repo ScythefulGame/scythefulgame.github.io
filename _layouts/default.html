@@ -11,6 +11,18 @@
     <link rel="icon" type="image/x-icon" href="assets/game_graphics/main_logo.png">
 
     <style>
+      /* Fix overflowing bs */
+        *, *::before, *::after 
+        {
+            box-sizing: border-box;
+        }
+
+        html, body 
+        {
+            overflow-x: hidden;
+        }
+
+        /* font stuff lmao */
         @font-face 
         {
             font-family: 'Lexend';
@@ -26,6 +38,7 @@
             font-style: normal;
         }
 
+        /* color stuff */
         :root 
         {
           --bg-navy: #0a1c33;
@@ -38,6 +51,7 @@
           --content-text: #e5edff;
         }
 
+        /* uhh everything */
         body 
         {
           margin: 0;
