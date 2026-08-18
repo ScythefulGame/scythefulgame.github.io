@@ -50,8 +50,8 @@ title: Contributors
 
     .contributor-card img 
     {
-        width: 220px;
-        height: 220px;
+        width: 250px;
+        height: 250px;
         border-radius: 50%;
         object-fit: cover;
         margin-bottom: 10px;
@@ -78,7 +78,7 @@ title: Contributors
     {
         color: var(--content-text);
         font-size: 25px;
-        margin: 4px 0;
+        margin: 10px 0;
     }
 
     .contributor-role 
@@ -108,7 +108,7 @@ title: Contributors
             {% if col == 0 %}
             {% unless forloop.first %}</div>{% endunless %}
 
-            <!-- alternate row background every 3 people -->
+            <!-- alternate row background on every row -->
             {% assign row_bg = "assets/generic_items/darkish_checkers.png" %}
             {% assign row_num = forloop.index0 | divided_by: per_row %}
             {% if row_num | modulo: 2 == 1 %}
