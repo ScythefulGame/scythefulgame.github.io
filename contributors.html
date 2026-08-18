@@ -78,6 +78,7 @@ title: Contributors
     .contributor-quote 
     {
         color: var(--content-text);
+        font-weight: bold;
         font-size: 25px;
         margin: 10px 0;
     }
@@ -85,6 +86,7 @@ title: Contributors
     .contributor-role 
     {
         color: var(--content-text);
+        font-weight: bold;
         font-size: 25px;
         letter-spacing: 0.5px;
     }
@@ -112,7 +114,8 @@ title: Contributors
             <!-- alternate row background on every row -->
             {% assign row_bg = "assets/generic_items/darkish_checkers.png" %}
             {% assign row_num = forloop.index0 | divided_by: per_row %}
-            {% if row_num | modulo: 2 == 1 %}
+            {% assign row_check = row_num | modulo: 2 %}
+            {% if row_check == 1 %}
                 {% assign row_bg = "assets/generic_items/dark_checkers.png" %}
             {% endif %}
 
