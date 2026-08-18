@@ -41,11 +41,8 @@ title: Contributors
 
         /* stretch to the viewport edges regardless of parent width/padding */
         width: 100vw;
-        position: relative;
-        left: 50%;
-        right: 50%;
-        margin-left: -50vw;
-        margin-right: -50vw;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
     }
 
     .contributor-card 
