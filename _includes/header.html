@@ -1,4 +1,22 @@
 <!-- Navigation Bar -->
+
+<style>
+    .nav-main_heading
+    {
+        color: var(--homepage-heading);
+    }
+    .nav-links 
+    {
+        display: flex;
+        justify-content: flex-end;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        gap: 30px;
+        color: var(--content-text);
+    }
+</style>
+
 <header>
     <a class="brand" href="/">
         <img src="assets/game_graphics/main_logo.png" alt="Scytheful logo">
@@ -7,8 +25,8 @@
         </span>
     </a>
 
-    <nav>
-        <details>
+    <nav class="nav-main_heading">
+        <details class="nav-links">
             <!-- Summary Collapsable Thing-->
             <summary>
                 ...
