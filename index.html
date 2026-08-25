@@ -2,6 +2,31 @@
 layout: default
 title: Home
 ---
+<style>
+  th, td 
+  {
+    padding: 20px;
+  }
+
+  .table_heading_top_panel
+  {
+    background-color: #002c92;
+    color: var(--homepage-heading);
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  .table_heading_content_stuff
+  {
+    color: var(--accent-cyan);
+    font-size: 38px;
+    text-align: center;
+    font-weight: bold;
+  }
+</style>
+
 <!-- Top Heading Content -->
 <div class = "main_heading" size="225px">
   <!-- <img src="assets/game_graphics/main_logo.png" alt="Scytheful logo" height="100px"> -->
@@ -36,5 +61,33 @@ title: Home
   <p style="color: var(--accent-cyan); font-size: 32px; text-align: center; font-weight: bold">
     Pages are being optimized rn lol idk
   </p>
+
+  <!-- TABLE HERE -->
+   <table>
+    <!-- Top Table Row Thing -->
+    <tr>
+      <td class="table_heading_top_panel" colspan="3">
+        Site Pages
+      </td>
+    </tr>
+
+    <!-- Individual Row Panels-->
+    <tr>
+      <th>
+        <a class="table_heading_content_stuff" href="/about-the-game">
+          <br>
+          About the Game
+        </a>
+      </th>
+
+      <th>
+        <a class="table_heading_content_stuff" href="/contributors">
+          <img src="/assets/index_panels/contributors_panel.png" alt="Contributors" height="400px">
+          <br>
+          Contributors
+        </a>
+      </th>
+    </tr>
+  </table>
 </div>
 <!-- End Main Content -->
